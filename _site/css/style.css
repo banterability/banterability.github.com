@@ -1,0 +1,50 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;font-size:100%;vertical-align:baseline;border:0;outline:0;background:transparent;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+:focus{outline:0;}
+table{border-collapse:collapse;border-spacing:0;}
+
+body{
+	background-color: #CD1B16;
+	color:#fff;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+div#header{
+/*			font-family: 'Myriad Pro', Corbel, 'Lucida Grande', Verdana, sans-serif;*/
+		padding: 10px 40px;
+}
+
+div#content{
+	color: #353E34;
+	background-color: #fff;
+	padding: 20px 40px;
+}
+
+div#content h1{
+	font-size: 36px;
+	line-height: 48px;
+	font-weight:500;
+}
+
+div#content p{
+	font-size: 18px;
+	line-height: 24px;
+	padding: 10px 0;
+}
+div#content a{
+	color: #074C80;
+	font-weight: bold;
+	text-decoration: none;
+	-webkit-transition: color .3s ease-in;
+}
+div#content a:hover{
+	color: #CD1B16;
+	-webkit-transition: color .3s ease-in;
+}
+
+div#footer{
+/*			font-family: 'Myriad Pro', Corbel, 'Lucida Grande', Verdana, sans-serif;*/
+		padding: 10px 40px;
+}
