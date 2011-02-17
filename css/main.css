@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  overflow-y: scroll; }
+
+body {
+  background-color: #FCFCF8;
+  color: #444;
+  width: 600px;
+  margin: 20px auto; }
+
+section {
+  margin: 25px 0; }
+
+h2 {
+  margin-bottom: 15px; }
+
+#project-container {
+  position: relative;
+  height: 230px; }
+  #project-container ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 175px; }
+  #project-container li {
+    list-style: none;
+    font-size: 18px;
+    background-repeat: no-repeat;
+    margin: 15px 0 15px 10px;
+    cursor: pointer;
+    padding-left: 5px;
+    border-left: 3px solid #FCFCF8; }
+    #project-container li.selected {
+      color: #666;
+      cursor: auto;
+      border-left: 3px solid #0094FF; }
+    #project-container li:hover {
+      border-left: 3px solid #FF7A35; }
+    #project-container li a {
+      text-decoration: none;
+      color: #666;
+      text-shadow: #bbb 0 1px 1px; }
+    #project-container li.kpcc {
+      /*            background-image:url(/img/projects/news_glyph.jpg);*/ }
+    #project-container li.mobile {
+      /*            background-image: url(/img/projects/mobile_glyph.jpg);*/ }
+    #project-container li.oncentral {
+      /*            background-image: url(/img/projects/location_glyph.png);*/ }
+    #project-container li.clipd {
+      /*            background-image: url(/img/projects/comment_glyph.jpg);*/ }
+
+#project-canvas {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 175px; }
+
+#canvas-wrapper {
+  position: relative;
+  width: 400px;
+  height: 230px; }
+  #canvas-wrapper .caption {
+    font-size: 14px; }
+  #canvas-wrapper img {
+    width: 400px;
+    height: 230px; }
+  #canvas-wrapper .caption {
+    position: absolute;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    bottom: 0;
+    right: 0;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 5px; }
+
+#elsewhere ul {
+  text-align: center; }
+  #elsewhere ul li {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+    height: 60px;
+    width: 60px; }
+    #elsewhere ul li:hover {
+      background-position: 0 -59px; }
+    #elsewhere ul li a {
+      display: inline-block;
+      width: 55px;
+      height: 55px; }
+  #elsewhere ul .email {
+    background-image: url(/img/elsewhere/email.png); }
+  #elsewhere ul .flickr {
+    background-image: url(/img/elsewhere/flickr.png); }
+  #elsewhere ul .github {
+    background-image: url(/img/elsewhere/github.png); }
+  #elsewhere ul .lastfm {
+    background-image: url(/img/elsewhere/lastfm.png); }
+  #elsewhere ul .linkedin {
+    background-image: url(/img/elsewhere/linkedin.png); }
+  #elsewhere ul .rss {
+    background-image: url(/img/elsewhere/rss.png); }
+  #elsewhere ul .tumblr {
+    background-image: url(/img/elsewhere/tumblr.png); }
+  #elsewhere ul .twitter {
+    background-image: url(/img/elsewhere/twitter.png); }
+  #elsewhere ul .vimeo {
+    background-image: url(/img/elsewhere/vimeo.png); }
+
+#elsewhere-caption {
+  margin-top: 5px;
+  font-size: 18px;
+  height: 22px;
+  text-align: center; }
+
+.ie6 #elsewhere li {
+  height: 100px; }
