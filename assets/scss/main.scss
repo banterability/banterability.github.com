@@ -14,64 +14,6 @@ h2{
     margin-bottom:15px;
 }
 
-#project-container{
-    position:relative;
-    height:230px;
-    
-    ul{
-        position:absolute;
-        top:0;
-        left:0;
-        width:175px;
-    }
-    li{
-        list-style:none;
-        font-size:18px;
-        background-repeat:no-repeat;
-        margin:15px 0 15px 10px;
-        cursor: pointer;
-        padding-left:5px;
-        border-left:3px solid #FCFCF8;
-        &.selected{
-            color:#666;
-            cursor:auto;
-            border-left:3px solid #0094FF;
-        }
-        &:hover{
-            border-left:3px solid #FF7A35;
-        }
-
-
-        a{
-            text-decoration:none;
-            color:#666;
-            text-shadow: #bbb 0 1px 1px;
-        }
-
-        &.kpcc{
-/*            background-image:url(/img/projects/news_glyph.jpg);*/
-        }
-        &.mobile{
-/*            background-image: url(/img/projects/mobile_glyph.jpg);*/
-        }
-        &.oncentral{
-/*            background-image: url(/img/projects/location_glyph.png);*/
-        }
-        &.clipd{
-/*            background-image: url(/img/projects/comment_glyph.jpg);*/
-        }
-        
-    }
-    
-}
-
-#project-canvas{
-    display:none;    
-    position:absolute;
-    top:0;
-    left:175px;
-}
-
 #canvas-wrapper{
     position:relative;
     width:400px;
