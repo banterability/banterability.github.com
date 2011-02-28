@@ -12,13 +12,13 @@
       $("#projects li").removeClass("selected");
       self.addClass("selected");
       if (canvas.is(":visible")) {
-        return canvas.slideUp(function() {
+        canvas.slideUp(function() {
           canvas.find("#canvas-wrapper").html("<img src='" + image + "' /><p class='caption'>" + caption + "</p>");
           return canvas.slideDown();
         });
       } else {
         canvas.find("#canvas-wrapper").html("<img src='" + image + "' /><p class='caption'>" + caption + "</p>");
-        return canvas.slideDown();
+        canvas.slideDown();
       }
     }
   });
