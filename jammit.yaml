@@ -1,0 +1,11 @@
+gzip_assets: off
+compress_assets: off
+
+javascripts:
+    application:
+        - assets/js/jquery-1.5.1.min.js
+        - assets/tmp/js/*.js
+
+stylesheets:
+    application:
+        - assets/tmp/css/*.css

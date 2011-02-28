@@ -1,24 +1,30 @@
 from fabric.api import *
+import os
+import shutil
 
 def compile_sass(style="compressed"):
     """
     Compile Sass stylesheets to CSS. Optional `style` command controls output.
     """
-    local('sass --update assets/scss:static/css --style %s --no-cache' % style)
+    local('sass --update assets/scss:assets/tmp/css --style %s --no-cache' % style)
 
 
 def compile_coffeescript():
     """
     Compile CoffeeScript files to Javascript. Requires `coffee` command.
     """
-    local('coffee -o assets/js/ -c assets/coffee')
+    local('coffee -o assets/tmp/js -c assets/coffee')
 
 
-def sprocketize():
+def compress_assets():
     """
-    Concatenate Javascript files into a single application.js file. Requires sprockets gem.
+    Concatenate stylesheets & js. Requires jammit gem.
     """
-    local('sprocketize -I assets/js/vendor assets/js/*.js > static/js/application.js')
+    local('jammit -o static -c jammit.yaml')
+
+
+def cleanup_assets():
+    shutil.rmtree(os.path.join(os.getcwd(), 'assets/tmp'))
 
 
 def assets():
@@ -27,7 +33,8 @@ def assets():
     """
     compile_sass()
     compile_coffeescript()
-    sprocketize()
+    compress_assets()
+    cleanup_assets()
 
 
 def deploy():
