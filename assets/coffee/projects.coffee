@@ -1,16 +1,3 @@
-preload = (images) ->
-    $(images).each((index, imageUrl) ->
-        $("<img />").attr('src', imageUrl)
-    )
-    return
-
-preload([
-       "/img/projects/election.jpg",
-       "/img/projects/prison.jpg",
-       "/img/projects/salary.jpg",
-       "/img/projects/solar.jpg"
-])
-
 $("#project-list li").click(->
     self = $(this)
     glif = $("#project-glif img")

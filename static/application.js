@@ -58,13 +58,6 @@ a,b,d,e){return d-f.easing.easeOutBounce(c,e-a,0,d,e)+b},easeOutBounce:function(
 }).call(this);
 
 (function() {
-  var preload;
-  preload = function(images) {
-    $(images).each(function(index, imageUrl) {
-      return $("<img />").attr('src', imageUrl);
-    });
-  };
-  preload(["/img/projects/election.jpg", "/img/projects/prison.jpg", "/img/projects/salary.jpg", "/img/projects/solar.jpg"]);
   $("#project-list li").click(function() {
     var animation_time, centerline, destination, glif, project, project_name, self;
     self = $(this);
