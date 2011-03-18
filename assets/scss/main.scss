@@ -21,22 +21,19 @@ h2{
     margin-bottom:10px;
 }
 
-#projects{
-    border:1px solid blue;
-}
 #project-list, #project-glif{
-    width:500px;
+    width:600px;
 }
 
 #project-list{
-    border-bottom:3px solid #999;
-    
+    color:#797979;
+    margin-bottom:2px;
     li{
         display:inline;
         padding-right:10px;
         cursor:pointer;
-        &:selected{
-            border-bottom:1px solid orange;
+        &.selected{
+            color:#343434;
         }
     }
 }
@@ -48,24 +45,28 @@ h2{
     img{
         position:absolute;
         width:25px;
-        height:25px;
-        background-color:blue;
+        height:12px;
         display:none;
     }
 }
 
 #project-canvas {
-    height:500px;
+    height:400px;
+    width:600px;
+    border:1px solid #999;
     overflow-y:hidden;
     z-index:1;
     
     & > div{
         display:none;
+        height:400px;
+        width:600px;
         
-        img{
-            width:600px;
-            height:474px;
-        }
+        &.election{ background-image:url(/img/projects/election.jpg); }
+        &.prison{ background-image:url(/img/projects/prison.jpg); }
+        &.salary{ background-image:url(/img/projects/salary.jpg); }
+        &.solar{ background-image:url(/img/projects/solar.jpg); }
+        
     }
 }
 

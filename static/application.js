@@ -58,6 +58,13 @@ a,b,d,e){return d-f.easing.easeOutBounce(c,e-a,0,d,e)+b},easeOutBounce:function(
 }).call(this);
 
 (function() {
+  var preload;
+  preload = function(images) {
+    $(images).each(function(index, imageUrl) {
+      return $("<img />").attr('src', imageUrl);
+    });
+  };
+  preload(["/img/projects/election.jpg", "/img/projects/prison.jpg", "/img/projects/salary.jpg", "/img/projects/solar.jpg"]);
   $("#project-list li").click(function() {
     var animation_time, centerline, destination, glif, project, project_name, self;
     self = $(this);
@@ -67,9 +74,9 @@ a,b,d,e){return d-f.easing.easeOutBounce(c,e-a,0,d,e)+b},easeOutBounce:function(
     $("#project-list li").removeClass("selected");
     self.addClass("selected");
     $("#project-canvas > div").fadeOut();
-    centerline = self.offset().left + self.outerWidth() / 2;
-    destination = centerline - glif.outerWidth() / 2 - glif.parent().offset().left;
-    animation_time = Math.abs(destination - glif.offset()["left"]) * 2;
+    centerline = self.position().left + self.outerWidth() / 2;
+    destination = centerline - glif.outerWidth() / 2 - glif.parent().position().left;
+    animation_time = Math.abs(destination - glif.position()["left"]) * 2;
     glif.animate({
       left: destination
     }, {
