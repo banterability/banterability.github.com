@@ -59,19 +59,24 @@ a,b,d,e){return d-f.easing.easeOutBounce(c,e-a,0,d,e)+b},easeOutBounce:function(
 
 (function() {
   $("#project-list li").click(function() {
-    var centerline, destination, glif, self;
+    var animation_time, centerline, destination, glif, project, project_name, self;
     self = $(this);
     glif = $("#project-glif img");
+    project_name = self.data("project");
+    project = $("#project-canvas ." + project_name);
     $("#project-list li").removeClass("selected");
     self.addClass("selected");
+    $("#project-canvas > div").fadeOut();
     centerline = self.offset().left + self.outerWidth() / 2;
     destination = centerline - glif.outerWidth() / 2 - glif.parent().offset().left;
+    animation_time = Math.abs(destination - glif.offset()["left"]) * 2;
     glif.animate({
       left: destination
     }, {
-      duration: Math.abs(destination - glif.offset()["left"]) * 3.3,
+      duration: animation_time,
       easing: 'easeOutQuart'
     });
+    project.fadeIn(animation_time);
   });
   $("#project-list li:first").click();
   $("#project-glif img").fadeIn();
