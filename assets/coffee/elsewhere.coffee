@@ -5,6 +5,5 @@ $("#elsewhere li > a").hover(->
     $("#elsewhere-caption").html("<strong>#{title}:</strong> #{caption}")
 ->
     $("#elsewhere-caption").html("")
+    return
 )
-
-$("#kpcc").click()

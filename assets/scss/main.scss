@@ -21,30 +21,36 @@ h2{
     margin-bottom:10px;
 }
 
-#canvas-wrapper{
-    position:relative;
-    width:400px;
-    height:230px;
-    .caption{
-        font-size:14px;
+#projects{
+    border:1px solid blue;
+}
+#project-list, #project-glif{
+    width:500px;
+}
 
-    }
-    img{
-        width:400px;
-        height:230px;
-    }
-    .caption{
-        position:absolute;
-        background-color:#000;
-        background-color:rgba(0,0,0,0.8);
-        color:#fff;
-        bottom:0;
-        right:0;
-        font-size:14px;
-        line-height:18px;
-        padding:5px;
-    }
+#project-list{
+    border-bottom:3px solid #999;
     
+    li{
+        display:inline;
+        padding-right:10px;
+        cursor:pointer;
+        &:selected{
+            border-bottom:1px solid orange;
+        }
+    }
+}
+
+#project-glif{
+    position:relative;
+    
+    img{
+        position:absolute;
+        width:25px;
+        height:25px;
+        background-color:blue;
+        display:none;
+    }
 }
 
 #elsewhere ul{
