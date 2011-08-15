@@ -1,0 +1,1 @@
+Regenrate assets (convert SASS to CSS, convert Coffeescript to JS, concatenate) with rake assets:rebuild.
