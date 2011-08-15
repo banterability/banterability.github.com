@@ -29,8 +29,3 @@ namespace :assets do
     puts "Assets rebuilt."
   end  
 end
-
-desc "Push master branch live"
-task :deploy do
-  sh "git push origin master"
-end
