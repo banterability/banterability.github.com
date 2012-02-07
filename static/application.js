@@ -20,7 +20,7 @@ shift(),i.sort());if(!!e&&!f.event.customEvent[h]||!!f.event.global[h]){c=typeof
   $("#elsewhere li > a").hover(function() {
     var caption, self, title;
     self = $(this);
-    title = self.data("title");
+    title = self.find('span').text();
     caption = self.data("caption");
     return $("#elsewhere-caption").html("<strong>" + title + ":</strong> " + caption);
   }, function() {

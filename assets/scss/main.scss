@@ -21,55 +21,6 @@ h2{
     margin-bottom:10px;
 }
 
-/*#project-list, #project-glif{
-    width:600px;
-}
-
-#project-list{
-    color:#797979;
-    margin-bottom:2px;
-    li{
-        display:inline;
-        padding-right:10px;
-        cursor:pointer;
-        &.selected{
-            color:#343434;
-        }
-    }
-}
-
-#project-glif{
-    position:relative;
-    z-index:10;
-
-    img{
-        position:absolute;
-        width:25px;
-        height:12px;
-        display:none;
-    }
-}
-
-#project-canvas {
-    height:400px;
-    width:600px;
-    border:1px solid #999;
-    overflow-y:hidden;
-    z-index:1;
-    
-    & > div{
-        display:none;
-        height:400px;
-        width:600px;
-        
-        &.election{ background-image:url(/img/projects/election.jpg); }
-        &.prison{ background-image:url(/img/projects/prison.jpg); }
-        &.salary{ background-image:url(/img/projects/salary.jpg); }
-        &.solar{ background-image:url(/img/projects/solar.jpg); }
-        
-    }
-}*/
-
 #elsewhere ul{
     text-align:center;
     li{
@@ -80,12 +31,16 @@ h2{
        width:60px;
        &:hover{
            background-position:0 -59px;
-       };
-       
+       }
+
        a{
            display:inline-block;
            width:55px;
            height:55px;
+
+           span {
+             display: none;
+           }
        }
     }
 
